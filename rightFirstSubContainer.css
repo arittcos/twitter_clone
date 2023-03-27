@@ -1,0 +1,416 @@
+:root {
+  --twitter-color: rgb(29, 155, 240);
+  --twitter-logo-hover: rgb(225, 243, 255);
+  --hover-color: rgb(234, 234, 234);
+  --ligtHeading: rgb(82, 96, 130);
+}
+
+.rightFirstSubContainer {
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightFirstSubContainerScrollItems {
+  overflow: auto;
+  height: 100%;
+}
+
+.rightFirstSubContainerScrollItems::-webkit-scrollbar {
+  display: none;
+}
+
+.rightFirstSubContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.topTweetsLogo svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.pageTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13.5px 0px;
+  background-color: #ffffff;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+}
+
+.pageTitle {
+  cursor: pointer;
+}
+
+.topTweetsLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.topTweetsLogo:hover.topTweetsLogo::after {
+  content: "Top Tweets";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+  display: block;
+}
+
+.topTweetsLogo:hover {
+  background-color: var(--hover-color);
+}
+
+.homePageWriteTweetProfileImg {
+  min-width: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  background-image: url("./Images/profilePic.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.homePageWriteTweetProfileImg:hover {
+  background-color: var(--hover-color);
+}
+
+.homePageWriteTweetProfileImgTextEditor {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.homePageWriteTweetTextEditor {
+  width: 100%;
+}
+
+.homePageWriteTweetTextEditor input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.homePageWriteTweetTextEditor input::placeholder {
+  font-size: 20px;
+  font-weight: 400;
+  -webkit-text-stroke: 0.2px;
+}
+
+.homePageWriteTweetOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.homePageWriteTweetOption:hover {
+  background-color: var(--twitter-logo-hover);
+}
+
+.mediaTitle,
+.gifTitle,
+.pollTitle,
+.emojiTitle,
+.scheduleTitle,
+.locationTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mediaTitle:hover .homePageWriteTweetOption::after {
+  content: "Media";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+}
+
+.gifTitle:hover .homePageWriteTweetOption::after {
+  content: "GIF";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+}
+
+.pollTitle:hover .homePageWriteTweetOption::after {
+  content: "Poll";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+}
+
+.emojiTitle:hover .homePageWriteTweetOption::after {
+  content: "Emoji";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+}
+
+.scheduleTitle:hover .homePageWriteTweetOption::after {
+  content: "Schedule";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+}
+
+.locationTitle:hover .homePageWriteTweetOption::after {
+  content: "Location";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+}
+
+.homePageWriteTweetOption svg {
+  width: 1.2rem;
+  fill: var(--twitter-color);
+}
+
+.homePageWriteTweetOptions {
+  display: flex;
+}
+
+.homePageWriteTweetOptions_TweetButton {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweetButton {
+  border-radius: 18px;
+  background-color: var(--twitter-color);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tweet {
+  display: flex;
+  cursor: pointer;
+}
+
+.tweet:hover {
+  background-color: var(--hover-color);
+}
+
+.tweetContent {
+  width: 100%;
+}
+
+.tweetContentTweetImg {
+  width: 100%;
+  height: 280px;
+  border-radius: 14px;
+  margin-top: 12px;
+}
+
+.tweetContentTweetImg img {
+  border-radius: 14px;
+}
+
+.tweetContentProfileName {
+  display: flex;
+  font-weight: 700;
+}
+
+.tweetContentProfileName span {
+  color: var(--ligtHeading);
+  font-weight: 400;
+}
+
+.tweetContentProfileName svg {
+  width: 1.2rem;
+  fill: var(--twitter-color);
+}
+
+.tweetContentProfileWrittenText span {
+  color: var(--twitter-color);
+}
+
+.tweetReplyRetweetLikeShare {
+  display: flex;
+  align-items: center;
+}
+
+.tweetReplyOptionContainer,
+.tweetRetweetOptionContainer,
+.tweetLikeOptionContainer,
+.tweetShareOptionContainer {
+  display: flex;
+  width: 25%;
+  align-items: center;
+  color: var(--ligtHeading);
+  font-size: 14px;
+  /* border: 1px solid black; */
+}
+
+.tweetReplyRetweetLikeShareIcons {
+  border-radius: 50%;
+  min-width: 30px;
+  min-height: 30px;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid black; */
+}
+
+.tweetReplyRetweetLikeShareIcons i {
+  font-size: 16px;
+  -webkit-text-stroke: 0.1px;
+}
+
+.hoverBlue:hover {
+  color: var(--twitter-color);
+}
+
+.hoverBgLightBlue:hover .tweetReplyRetweetLikeShareIcons {
+  background-color: rgb(212, 228, 236);
+}
+
+.hoverRed:hover {
+  color: crimson;
+}
+
+.hoverGreen:hover {
+  color: limegreen;
+}
+
+.hoverBgGreen:hover .tweetReplyRetweetLikeShareIcons {
+  background-color: rgb(210, 235, 210);
+}
+
+.hoverBgRed:hover .tweetReplyRetweetLikeShareIcons {
+  background-color: rgb(234, 212, 216);
+}
+
+.tweetReplyOption,
+.tweetRetweetOption,
+.tweetLikeOption,
+.tweetShareOption {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tweetReplyOption:hover .tweetReplyRetweetLikeShareIcons::after {
+  content: "Reply";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+  display: block;
+}
+
+.tweetRetweetOption:hover .tweetReplyRetweetLikeShareIcons::after {
+  content: "Retweet";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+  display: block;
+}
+
+.tweetLikeOption:hover .tweetReplyRetweetLikeShareIcons::after {
+  content: "Like";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+  display: block;
+}
+
+.tweetShareOption:hover .tweetReplyRetweetLikeShareIcons::after {
+  content: "Share";
+  width: max-content;
+  position: absolute;
+  bottom: -22px;
+  padding: 0px 4px;
+  border-radius: 2px;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: black;
+  opacity: 0.7;
+  color: #ffffff;
+  display: block;
+}
